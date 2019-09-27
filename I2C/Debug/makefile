@@ -37,8 +37,8 @@ I2C.list \
 all: I2C.elf secondary-outputs
 
 # Tool invocations
-I2C.elf: $(OBJS) $(USER_OBJS) C:\Users\joaosh\Downloads\I2C\STM32F334R8TX_FLASH.ld
-	arm-none-eabi-gcc -o "I2C.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\joaosh\Downloads\I2C\STM32F334R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="I2C.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+I2C.elf: $(OBJS) $(USER_OBJS) C:\Users\joaosh\Documents\Git\Micros2\I2C\STM32F334R8TX_FLASH.ld
+	arm-none-eabi-gcc -o "I2C.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\joaosh\Documents\Git\Micros2\I2C\STM32F334R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="I2C.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -49,6 +49,9 @@ SPI_HandleTypeDef hspi1;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
+int contA;
+int contB;
+int contC;
 
 /* USER CODE END PV */
 
@@ -64,9 +67,8 @@ static void MX_SPI1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-	uint8_t data[3];
-
-
+uint8_t data[5];
+int f;
 /* USER CODE END 0 */
 
 /**
@@ -103,13 +105,17 @@ int main(void)
   /* USER CODE BEGIN 2 */
   LCD_Init();
 
-  uint8_t end_data[3];
+  uint8_t endereco[2];
 
-  uint8_t dado;
-  char Buffer[50];
+  data[0] = 0;
+  data[1] = 1;
 
-  end_data[0] = 0;
-  end_data[1] = 2;
+  endereco[0] = 0;
+  endereco[1] = 1;
+
+  char BufferA[12];
+  char BufferB[12];
+  char BufferC[12];
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -119,22 +125,25 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  HAL_I2C_Master_Transmit(&hi2c1, EEPROM_ADDRESS , data, 3, 1000);
+	  HAL_I2C_Master_Transmit(&hi2c1, EEPROM_ADDRESS , endereco, 2, 1000); // manda endereço que quer ler dado
 
 	  HAL_Delay(1000);
 
-	  HAL_I2C_Master_Transmit(&hi2c1, EEPROM_ADDRESS , end_data, 2, 1000);
+	  HAL_I2C_Master_Receive(&hi2c1, EEPROM_ADDRESS, data, 5, 1000); // lê o dado
 
-	  HAL_Delay(1000);
+	  sprintf(BufferA,"Dado: %d\r\n",data[2]);
+	  sprintf(BufferB,"Dado: %d\r\n",data[3]);
+	  sprintf(BufferC,"Dado: %d\r\n",data[4]);
 
-	  HAL_I2C_Master_Receive(&hi2c1, EEPROM_ADDRESS, &dado, 1, 1000);
+	  LCD_Write_String(0,0,BufferA);
+	  LCD_Write_String(0,1,BufferB);
+	  LCD_Write_String(0,2,BufferC);
 
-	  sprintf(Buffer,"Dado: %d\r\n",dado);
-
-	  //HAL_UART_Transmit(&huart2,(char*)Buffer, 50, 1000)!= HAL_OK;
-	  LCD_Write_String(0,0,Buffer);
-
-	  HAL_Delay(1000);
+	  if (f == 1){
+		  HAL_I2C_Master_Transmit(&hi2c1, EEPROM_ADDRESS , data, 5, 1000); // escreve o dado
+		  HAL_Delay(1000);
+	  	  f=0;
+	  }
 
   }
   /* USER CODE END 3 */
@@ -376,22 +385,27 @@ static void MX_GPIO_Init(void)
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 
-
+	f=1;
 	if (GPIO_Pin == S1_Pin){
 
-		data[0] = 1;
+		contA++;
+		data[2] = contA;
 	}
 	if (GPIO_Pin == S2_Pin){
 
-		data[0] = 2;
+		contB++;
+		data[3] = contB;
 	}
 	if (GPIO_Pin == S3_Pin){
 
-
+		contC++;
+		data[4] = contC;
 	}
 	if (GPIO_Pin == B1_Pin){
 
-
+		contA = 0; data[2] = contA;
+		contB = 0; data[3] = contB;
+		contC = 0; data[4] = contC;
 	}
 }
 
