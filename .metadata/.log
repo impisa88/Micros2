@@ -1,0 +1,72 @@
+!SESSION 2019-10-03 17:19:19.372 -----------------------------------------------
+eclipse.buildId=Version 1.0.2
+java.version=1.8.0_202
+java.vendor=AdoptOpenJdk
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  C:\Users\joaosh\Documents\Git\Micros2\I2C - 2.0\.cproject
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\joaosh\Documents\Git\Micros2\I2C - 2.0\.cproject
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2019-10-03 17:20:59.794
+!MESSAGE Log4j initialized with config file C:\Users\joaosh\Documents\Git\Micros2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2019-10-03 17:21:23.456
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 77 2019-10-03 17:21:23.472
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2019-10-03 17:21:23.472
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2019-10-03 17:21:23.472
+!MESSAGE C:\Users\joaosh\Documents\Git\Micros2\I2C - 2.0 overlaps the location of another project: 'I2C - 2.0'
+
+!ENTRY org.eclipse.core.net 4 0 2019-10-03 17:21:29.610
+!MESSAGE WinHttp.GetProxyForUrl for pac failed with error 'Não foi possível baixar o script de configuração automática do proxy
+' #12167.
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-10-03 17:22:00.447
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-10-03 17:22:00.447
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-10-03 17:22:00.447
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-10-03 17:22:00.448
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-10-03 17:22:00.448
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-10-03 17:22:00.448
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-10-03 17:22:00.448
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-10-03 17:22:00.449
+!MESSAGE Falling back to default toolchain
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-03 17:22:32.260
+!MESSAGE Indexed 'Paralelo' (22 sources, 104 headers) in 8,59 sec: 8.959 declarations; 29.220 references; 0 unresolved inclusions; 256 syntax errors; 84 unresolved names (0,22%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-03 17:22:32.263
+!MESSAGE Indexed 'exer2_relogioTimer' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-03 17:22:36.731
+!MESSAGE Indexed 'shift' (24 sources, 105 headers) in 4,45 sec: 9.882 declarations; 34.724 references; 0 unresolved inclusions; 76 syntax errors; 54 unresolved names (0,12%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-03 17:22:40.891
+!MESSAGE Indexed 'exer1_relogio' (22 sources, 103 headers) in 2,74 sec: 9.454 declarations; 30.206 references; 0 unresolved inclusions; 76 syntax errors; 54 unresolved names (0,14%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-03 17:22:46.498
+!MESSAGE Indexed 'ADC_Display' (25 sources, 106 headers) in 3,22 sec: 9.926 declarations; 34.998 references; 0 unresolved inclusions; 76 syntax errors; 54 unresolved names (0,12%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-03 17:22:49.024
+!MESSAGE Indexed 'relogio' (21 sources, 104 headers) in 2,51 sec: 8.966 declarations; 29.180 references; 0 unresolved inclusions; 216 syntax errors; 54 unresolved names (0,14%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-03 17:22:49.028
+!MESSAGE Indexed 'Exer2_timer' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-03 17:22:57.718
+!MESSAGE Indexed 'exer2_clocktimer' (22 sources, 103 headers) in 4,06 sec: 10.028 declarations; 40.522 references; 0 unresolved inclusions; 76 syntax errors; 54 unresolved names (0,11%)
