@@ -99,7 +99,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   LCD_Init();
   char Buffer[50];
-  char dados;
+  char init;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -109,11 +109,14 @@ int main(void)
     /* USER CODE END WHILE */
 	  HAL_GPIO_WritePin(nCS_GPIO_Port, nCS_Pin, 0);
 
-	  HAL_SPI_Receive(&hspi1, &dados, 1, 1000);
+	  init = "0xC";
+	  HAL_SPI_Transmit(&hspi1, &init, nCS_Pin, 1000);
+
+	  HAL_SPI_Receive(&hspi1, &init, nCS_Pin, 1000);
 
 	  HAL_GPIO_WritePin(nCS_GPIO_Port, nCS_Pin, 1);
 
-	  sprintf(Buffer,"%d", dados);
+	  sprintf(Buffer,"%d", init);
 
 	  LCD_Write_String(0,0,Buffer);
 	  HAL_Delay(1000);
